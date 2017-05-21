@@ -106,7 +106,7 @@ class BaseClient(object):
         """
         return ','.join(
             ['{0}:{1}'.format(key, value) for
-             key, value in filter_by.items() if value is not None]
+             key, value in list(filter_by.items()) if value is not None]
         )
 
     def _query(self, params):
